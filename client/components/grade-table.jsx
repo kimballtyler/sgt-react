@@ -37,7 +37,7 @@ function GradeTable(props) {
     );
   }
   return (
-    <table className="table col table-dark table-striped table-bordered table-hover mt-1">
+    <table className="table col-7 table-dark table-striped table-bordered table-hover mt-1">
       <TableHeading />
       <tbody>
         {
