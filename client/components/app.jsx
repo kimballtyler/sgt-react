@@ -16,7 +16,9 @@ class App extends React.Component {
 
   handleDelete(gradeId) {
     const index = this.state.grades.findIndex(item => item.id === gradeId);
-    fetch(`/api/grades/${gradeId}`);
+    fetch(`/api/grades/${gradeId}`, {
+      method: 'DELETE'
+    });
     const newGrades = this.state.grades.slice();
     newGrades.splice(index, 1);
     this.setState({ grades: newGrades });

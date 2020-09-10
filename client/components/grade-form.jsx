@@ -76,7 +76,7 @@ class GradeForm extends React.Component {
           <input onChange={this.handleChange} value={this.state.grade} name="grade" type="number" className="form-control" placeholder="Student Grade"/>
         </div>
 
-        <button onClick={this.handleSubmit} type="submit" className="btn btn-md btn-success mr-2">Add</button>
+        <button onClick={this.handleSubmit} type="submit" className="btn btn-md btn-info mr-2">Add</button>
         <button onClick={this.handleReset} type="reset" className="btn btn-md btn-outline-secondary">Cancel</button>
       </form>
     );
