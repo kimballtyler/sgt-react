@@ -3,9 +3,10 @@ import React from 'react';
 function Grade(props) {
   return (
     <tr>
-      <td>{props.grade.name}</td>
-      <td>{props.grade.course}</td>
-      <td>{props.grade.grade}</td>
+      <td className="text-center">{props.grade.name}</td>
+      <td className="text-center">{props.grade.course}</td>
+      <td className="text-center">{props.grade.grade}</td>
+      <td className="text-center"><button onClick={() => props.handleDelete(props.grade.id)} className="btn-outline-danger btn">DELETE</button></td>
     </tr>
   );
 }
@@ -43,7 +44,7 @@ function GradeTable(props) {
         {
           props.grades.map(grade => {
             return (
-              <Grade key={grade.id} grade={grade} />
+              <Grade handleDelete={props.handleDelete} key={grade.id} grade={grade} />
             );
           })
         }

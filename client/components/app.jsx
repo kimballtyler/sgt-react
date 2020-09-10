@@ -11,6 +11,15 @@ class App extends React.Component {
     };
     this.getAverageGrade = this.getAverageGrade.bind(this);
     this.postNewGrade = this.postNewGrade.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  handleDelete(gradeId) {
+    const index = this.state.grades.findIndex(item => item.id === gradeId);
+    fetch(`/api/grades/${gradeId}`);
+    const newGrades = this.state.grades.slice();
+    newGrades.splice(index, 1);
+    this.setState({ grades: newGrades });
   }
 
   getAverageGrade() {
@@ -55,7 +64,7 @@ class App extends React.Component {
       <div className="ml-4 container">
         <Header averageGrade={this.getAverageGrade()} />
         <div className="row">
-          <GradeTable grades={this.state.grades} />
+          <GradeTable handleDelete={this.handleDelete} grades={this.state.grades} />
           <GradeForm onSubmit={this.postNewGrade} />
         </div>
       </div>
