@@ -6,7 +6,7 @@ function Grade(props) {
       <td className="text-center">{props.grade.name}</td>
       <td className="text-center">{props.grade.course}</td>
       <td className="text-center">{props.grade.grade}</td>
-      <td className="text-center"><button onClick={() => props.handleDelete(props.grade.id)} className="btn-outline-danger btn">DELETE</button></td>
+      <td className="text-center"><button onClick={() => props.handleDelete(props.grade.id)} className="btn-outline-danger btn btn-sm">DELETE</button></td>
     </tr>
   );
 }
