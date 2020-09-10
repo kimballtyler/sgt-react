@@ -26,7 +26,7 @@ function TableHeading() {
 function GradeTable(props) {
   if (props.grades.length === 0) {
     return (
-      <table className="col-7 table table-dark table-striped table-bordered table-hover mt-3">
+      <table className="col-7 table table-dark table-striped table-bordered table-hover mt-1">
         <TableHeading />
         <tbody>
           <tr>
@@ -37,7 +37,7 @@ function GradeTable(props) {
     );
   }
   return (
-    <table className="table col-6 table-dark table-striped table-bordered table-hover mt-3">
+    <table className="table col table-dark table-striped table-bordered table-hover mt-1">
       <TableHeading />
       <tbody>
         {
